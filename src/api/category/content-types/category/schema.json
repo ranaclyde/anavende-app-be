@@ -29,6 +29,16 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "isHighlighted": {
+      "type": "boolean",
+      "default": false
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "categories"
     }
   }
 }
