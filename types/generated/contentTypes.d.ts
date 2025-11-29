@@ -516,6 +516,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     discount: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
     isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     isHighlighted: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isNew: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

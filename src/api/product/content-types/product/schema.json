@@ -58,6 +58,10 @@
     "isActive": {
       "type": "boolean",
       "default": true
+    },
+    "isNew": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
