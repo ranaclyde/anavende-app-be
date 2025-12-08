@@ -10,11 +10,5 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Ana Vende",
-      "required": true
-    }
-  }
+  "attributes": {}
 }
