@@ -11,6 +11,11 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
     "email": {
       "type": "email",
       "required": true,
