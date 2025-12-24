@@ -691,15 +691,19 @@ export interface ApiSettingSetting extends Struct.SingleTypeSchema {
       Schema.Attribute.Unique;
     facebook: Schema.Attribute.String;
     instagram: Schema.Attribute.String;
+    latitude: Schema.Attribute.Decimal & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::setting.setting'
     > &
       Schema.Attribute.Private;
+    longitude: Schema.Attribute.Decimal & Schema.Attribute.Required;
     maintenance: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     phone: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    shippingRates: Schema.Attribute.Component<'settings.shipping-rates', true> &
+      Schema.Attribute.Required;
     tiktok: Schema.Attribute.String;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &

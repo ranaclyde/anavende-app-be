@@ -13,10 +13,27 @@ export interface ProductStock extends Struct.ComponentSchema {
   };
 }
 
+export interface SettingsShippingRates extends Struct.ComponentSchema {
+  collectionName: 'components_settings_shipping_rates';
+  info: {
+    displayName: 'shippingRates';
+  };
+  attributes: {
+    label: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    maxKm: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    price: Schema.Attribute.Decimal & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'product.stock': ProductStock;
+      'settings.shipping-rates': SettingsShippingRates;
     }
   }
 }

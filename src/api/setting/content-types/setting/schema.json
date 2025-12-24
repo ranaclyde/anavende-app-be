@@ -41,6 +41,20 @@
     "maintenance": {
       "type": "boolean",
       "default": false
+    },
+    "latitude": {
+      "type": "decimal",
+      "required": true
+    },
+    "longitude": {
+      "type": "decimal",
+      "required": true
+    },
+    "shippingRates": {
+      "type": "component",
+      "component": "settings.shipping-rates",
+      "repeatable": true,
+      "required": true
     }
   }
 }
